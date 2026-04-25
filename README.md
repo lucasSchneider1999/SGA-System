@@ -1,7 +1,7 @@
 # Sistema de Gestão para Açougue (SGA)
 
 ## 📝 Visão Geral
-Sistema desktop desenvolvido para operação local (PDV e Retaguarda), com foco em alta eficiência, baixo consumo de recursos e aplicação de práticas avançadas de engenharia de software.
+Sistema desktop desenvolvido para operação local (PDV e Retaguarda), com foco em alta eficiência, baixo consumo de recursos e aplicação de práticas avançadas de engenharia de software. O sistema é projetado para operar em Guaranis (PYG) como moeda base, sem o uso de centavos.
 
 ## 🏗️ Arquitetura do Projeto
 O projeto segue a **Clean Architecture** simplificada e o padrão **MVVM (Model-View-ViewModel)** para garantir o desacoplamento entre a interface do usuário e a lógica de negócio.
@@ -41,9 +41,12 @@ src/
 - **UI:** WPF (Windows Presentation Foundation)
 - **Banco de Dados:** SQLite
 - **Arquitetura:** Clean Architecture & MVVM
+- **Testes:** xUnit & FluentAssertions
 
 ## 📋 Diretrizes de Desenvolvimento
-- **Idioma do Código:** Inglês.
-- **Idioma dos Comentários:** Português do Brasil.
-- **Idioma da Interface (UI):** Espanhol Paraguai.
+- **Metodologia:** TDD (Test Driven Development) - Nenhuma funcionalidade é implementada sem testes prévios.
+- **Idioma do Código:** Inglês (Classes, Métodos).
+- **Idioma dos Membros:** Espanhol Paraguai (Propriedades, Variáveis).
+- **Idioma dos Comentários e UI:** Espanhol Paraguai.
+- **Gestão Financeira:** Uso de tipos inteiros (`int`) para preços em PYG para evitar erros de arredondamento por centavos.
 - **Performance:** Foco em hardware limitado (4GB RAM) e uso rigoroso de `async/await` para evitar travamentos de UI.
